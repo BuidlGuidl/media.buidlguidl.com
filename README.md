@@ -1,6 +1,11 @@
 Front-end redesign
 ![screenshot](https://mediabuidlguidl.vercel.app/thumbnail.png)
 
+Font credits:
+Obviously by [OHNO Type Co.](https://ohnotype.co/fonts/obviously)
+/home/him/dev/bg/media.buidlguidl.com/packages/nextjs/public/images/font-spec-screenshot-1.png
+/home/him/dev/bg/media.buidlguidl.com/packages/nextjs/public/images/font-spec-screenshot-2.png
+
 # 📺 BG Media Cohort
 
 We're running an experiment to fund focused, high-leverage open-source work by providing streams to builders rewarding them for their ongoing contributions to BuidlGuidl and the Ethereum Ecosystem.
