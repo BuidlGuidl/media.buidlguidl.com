@@ -1,10 +1,6 @@
 Front-end redesign
 ![screenshot](https://mediabuidlguidl.vercel.app/thumbnail.png)
 
-Font credits:
-The "Buidl Guidl Media" phrase and the word "Media" in the BG Media logo lock-up are expressed in the font 'Obviously' by [OHNO Type Co.](https://ohnotype.co/fonts/obviously)
-![font-credit-screenshot](https://mediabuidlguidl.vercel.app/font-spec-screenshot-1.png)
-
 
 
 # 📺 BG Media Cohort
@@ -177,3 +173,7 @@ yarn vercel:yolo
 We have github workflow setup checkout `.github/workflows/lint.yaml` which runs types and lint error checks every time code is **pushed** to `main` branch or **pull request** is made to `main` branch
 
 To disable it, **delete `.github` directory**
+
+
+### Font attribution:
+The "Buidl Guidl Media" phrase and the word "Media" in the BG Media logo lock-up are expressed in the font 'Obviously' by [OHNO Type Co.](https://ohnotype.co/fonts/obviously)
