@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import type { AppProps } from "next/app";
-// import { Space_Mono } from "next/font/google";
 import { Space_Grotesk } from "next/font/google";
 import { RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import "@rainbow-me/rainbowkit/styles.css";
@@ -18,7 +17,6 @@ import { appChains } from "~~/services/web3/wagmiConnectors";
 import "~~/styles/globals.css";
 
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], weight: "400" });
-// const spaceMono = Space_Mono({ subsets: ["latin"], weight: "400" });
 
 const urqlClient = new Client({
   url: "https://bg-ponder-indexer-production.up.railway.app/",
