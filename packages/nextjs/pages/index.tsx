@@ -1,9 +1,6 @@
 import React from "react";
-import { Space_Grotesk } from "next/font/google";
 import type { NextPage } from "next";
 import { StreamContractInfo } from "~~/components/StreamContractInfo";
-
-const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], weight: "300" });
 
 const Home: NextPage = () => {
   return (
@@ -11,7 +8,7 @@ const Home: NextPage = () => {
       <div className="max-w-6xl space-y-12 px-4 py-12">
         <h1 className="font-bold text-xl">Welcome</h1>
         <div>
-          <p className={`mt-0 text-4xl md:text-5xl ${spaceGrotesk.className}`}>
+          <p className="font-light mt-0 text-4xl md:text-5xl ">
             Funding high leverage BuidlGuidl members for their designs, social media contributions, and other media
             related work.
           </p>
