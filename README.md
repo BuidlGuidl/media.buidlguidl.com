@@ -3,8 +3,8 @@ Front-end redesign
 
 Font credits:
 Obviously by [OHNO Type Co.](https://ohnotype.co/fonts/obviously)
-![font-credit-screenshot](https://mediabuidlguidl.vercel.app/images/font-spec-screenshot-1.png)
-![font-credit-screenshot](https://mediabuidlguidl.vercel.app/images/font-spec-screenshot-2.png)
+![font-credit-screenshot](https://mediabuidlguidl.vercel.app/font-spec-screenshot-1.png)
+![font-credit-screenshot](https://mediabuidlguidl.vercel.app/font-spec-screenshot-2.png)
 
 
 # 📺 BG Media Cohort
