@@ -26,11 +26,11 @@ export const Header = () => (
       <meta property="og:image" content="https://mediabuidlguidl.vercel.app/thumbnail.png" />
       <meta property="twitter:image" content="https://mediabuidlguidl.vercel.app/thumbnail.png" />
     </Head>
-    <div className="sticky lg:static top-0 navbar bg-base-100 min-h-0 flex-shrink-0 justify-between z-20 p-4 items-start">
+    <div className="sticky lg:static top-0 navbar mb-6 bg-base-100 min-h-0 flex-shrink-0 justify-between z-20 p-4 items-start">
       <div className="flex-col items-start">
         <div className="bgmedia-logo w-36">
           <Link href="/">
-            <Image alt="bg media logo" src="/images/logo_bgmedia.svg" width="99" height="99" />
+            <Image alt="bg media logo" src="/images/logo_bgmedia.svg" width="120" height="120" />
           </Link>
         </div>
       </div>

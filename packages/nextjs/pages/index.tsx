@@ -8,16 +8,16 @@ const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], weight: "300" });
 const Home: NextPage = () => {
   return (
     <>
-      <div className="max-w-3xl space-y-12 px-4 py-8">
-        <h1 className="font-bold">Welcome</h1>
+      <div className="max-w-6xl space-y-12 px-4 py-12">
+        <h1 className="font-bold text-xl">Welcome</h1>
         <div>
-          <p className={`mt-0 text-4xl ${spaceGrotesk.className}`}>
+          <p className={`mt-0 text-4xl md:text-5xl ${spaceGrotesk.className}`}>
             Funding high leverage BuidlGuidl members for their designs, social media contributions, and other media
             related work.
           </p>
           <p className="text-xs">Made possible by the BuidlGuidl!</p>
         </div>
-        <div className="mb-10">
+        <div className="mb-10 max-w-xl">
           <StreamContractInfo />
         </div>
       </div>
