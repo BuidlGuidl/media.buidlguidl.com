@@ -46,7 +46,7 @@ const Members: NextPage = () => {
 
   return (
     <>
-      <div className="max-w-3xl px-4 py-8 text-xs">
+      <div className="max-w-3xl px-4 py-8">
         <h1 className="text-3xl font-[900] mb-8">Members</h1>
         <div className="mb-16">
           <p className="mt-0 mb-10 text-xl font-[100]">
@@ -103,7 +103,7 @@ const Members: NextPage = () => {
 
       <input type="checkbox" id="withdraw-modal" className="modal-toggle" />
       <label htmlFor="withdraw-modal" className="modal cursor-pointer">
-        <label className="modal-box relative bg-primary shadow shadow-primary">
+        <label className="modal-box relative shadow shadow-primary">
           {/* dummy input to capture event onclick on modal box */}
           <input className="h-0 w-0 absolute top-0 left-0" />
           <h3 className="text-xl font-bold mb-8">Withdraw from your stream</h3>
@@ -129,11 +129,11 @@ const Members: NextPage = () => {
       </label>
       <input type="checkbox" id="withdraw-events-modal" className="modal-toggle" />
       <label htmlFor="withdraw-events-modal" className="modal cursor-pointer">
-        <label className="modal-box relative max-w-4xl shadow shadow-primary">
+        <label className="modal-box bg-[#FFF] relative max-w-2xl">
           {/* dummy input to capture event onclick on modal box */}
           <input className="h-0 w-0 absolute top-0 left-0" />
-          <h3 className="text-xl font-bold mb-8">
-            <p className="mb-1">Contributions</p>
+          <h3 className="mb-8 text-3xl">
+            <p className="mb-8 font-bold text-base ">Contributions</p>
             <Address address={selectedAddress} />
           </h3>
           <label htmlFor="withdraw-events-modal" className="btn btn-ghost btn-sm btn-circle absolute right-3 top-3">
@@ -147,7 +147,7 @@ const Members: NextPage = () => {
                   <div className="text-lg loading-dots">Loading...</div>
                 </div>
               ) : filteredEvents.length > 0 ? (
-                <div className="flex flex-col">
+                <div className="flex flex-col font-sans text-sm leading-loose">
                   {filteredEvents.map(event => (
                     <div key={event.id} className="flex flex-col">
                       <div>
