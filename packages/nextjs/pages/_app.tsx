@@ -16,7 +16,7 @@ import { wagmiClient } from "~~/services/web3/wagmiClient";
 import { appChains } from "~~/services/web3/wagmiConnectors";
 import "~~/styles/globals.css";
 
-const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], weight: ["300", "400", "500"] });
+const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] });
 
 const urqlClient = new Client({
   url: "https://bg-ponder-indexer-production.up.railway.app/",

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Space_Grotesk } from "next/font/google";
 import { ethers } from "ethers";
 import type { NextPage } from "next";
 import { StreamContractInfo } from "~~/components/StreamContractInfo";
@@ -7,8 +6,6 @@ import { Address, EtherInput } from "~~/components/scaffold-eth";
 import { useScaffoldContractRead, useScaffoldContractWrite } from "~~/hooks/scaffold-eth";
 import { useAddBuilderEvents } from "~~/hooks/useCohortAddBuilderEvents";
 import { useCohortWithdrawEvents } from "~~/hooks/useCohortWithdrawEvents";
-
-const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], weight: "300" });
 
 const Members: NextPage = () => {
   const [reason, setReason] = useState("");
@@ -50,9 +47,9 @@ const Members: NextPage = () => {
   return (
     <>
       <div className="max-w-3xl px-4 py-8 text-xs">
-        <h1 className={`text-4xl font-bold mb-8 ${spaceGrotesk.className}`}>Members</h1>
+        <h1 className="text-3xl font-[900] mb-8">Members</h1>
         <div className="mb-16">
-          <p className="mt-0 mb-10">
+          <p className="mt-0 mb-10 text-xl font-[100]">
             These are the BG Media active builders and their streams. You can click on any builder to see their detailed
             contributions.
           </p>
