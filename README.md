@@ -2,8 +2,7 @@ Front-end redesign
 ![screenshot](https://mediabuidlguidl.vercel.app/thumbnail.png)
 
 Font credits:
-The "Buidl Guidl Media" phrase in the BG Media logo lock-up features the font 'Obviously' by [OHNO Type Co.](https://ohnotype.co/fonts/obviously)
-The word "Media" in the BG Media logo lock-up features the font 'Obviously' by [OHNO Type Co.](https://ohnotype.co/fonts/obviously)
+The "Buidl Guidl Media" phrase in the BG Media logo lock-up as well as the word "Media" feature the font 'Obviously' by [OHNO Type Co.](https://ohnotype.co/fonts/obviously)
 ![font-credit-screenshot](https://mediabuidlguidl.vercel.app/font-spec-screenshot-1.png)
 
 
