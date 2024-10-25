@@ -103,11 +103,14 @@ const Members: NextPage = () => {
 
       <input type="checkbox" id="withdraw-modal" className="modal-toggle" />
       <label htmlFor="withdraw-modal" className="modal cursor-pointer">
-        <label className="modal-box relative shadow shadow-primary">
+        <label className="modal-box bg-[#FFF] relative">
           {/* dummy input to capture event onclick on modal box */}
           <input className="h-0 w-0 absolute top-0 left-0" />
-          <h3 className="text-xl font-bold mb-8">Withdraw from your stream</h3>
-          <label htmlFor="withdraw-modal" className="btn btn-ghost btn-sm btn-circle absolute right-3 top-3">
+          <h3 className="text-base font-bold mb-8">Withdraw from your stream</h3>
+          <label
+            htmlFor="withdraw-modal"
+            className="btn btn-ghost hover:border-base-100 hover:text-base-100 hover:bg-[#00000000] btn-sm btn-circle absolute right-3 top-3"
+          >
             ✕
           </label>
           <div className="space-y-3">
@@ -136,7 +139,10 @@ const Members: NextPage = () => {
             <p className="mb-8 font-bold text-base ">Contributions</p>
             <Address address={selectedAddress} />
           </h3>
-          <label htmlFor="withdraw-events-modal" className="btn btn-ghost btn-sm btn-circle absolute right-3 top-3">
+          <label
+            htmlFor="withdraw-events-modal"
+            className="btn btn-ghost hover:border-base-100 hover:text-base-100 hover:bg-[#00000000] btn-sm btn-circle absolute right-3 top-3"
+          >
             ✕
           </label>
           <div className="space-y-3">
