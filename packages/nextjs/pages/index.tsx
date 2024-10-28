@@ -8,7 +8,7 @@ const Home: NextPage = () => {
       <div className="max-w-6xl space-y-12 px-4 py-12">
         <h1 className="font-[900] text-xl">Welcome</h1>
         <div>
-          <p className="font-[100] mt-0 text-4xl md:text-5xl ">
+          <p className="font-[100] mt-0 text-4xl">
             Funding high leverage BuidlGuidl members for their designs, social media contributions, and other media
             related work.
           </p>

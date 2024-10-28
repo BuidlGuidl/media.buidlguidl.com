@@ -86,7 +86,7 @@ const Members: NextPage = () => {
                           max="100"
                         ></progress>
 
-                        <div>{percentage}%</div>
+                        <div className="relative right-4 text-color=[#fff]">{percentage}%</div>
                       </div>
                       <div>
                         Ξ {parseFloat(unlocked).toFixed(4)} / {cap}
