@@ -49,7 +49,7 @@ const Members: NextPage = () => {
       <div className="max-w-3xl px-4 py-8">
         <h1 className="text-3xl font-[900] mb-8">Members</h1>
         <div className="mb-16">
-          <p className="mt-0 mb-10 text-xl font-[100]">
+          <p className="mt-0 mb-10 text-2xl font-[100]">
             These are the BG Media active builders and their streams. You can click on any builder to see their detailed
             contributions.
           </p>
@@ -67,7 +67,7 @@ const Members: NextPage = () => {
                 const percentage = Math.floor((parseFloat(unlocked) / parseFloat(cap)) * 100);
                 return (
                   <div className="flex flex-col" key={builderData.builderAddress}>
-                    <div className="flex flex-col">
+                    <div className="flex flex-col space-y-2">
                       <div className="md:w-1/2 flex">
                         <label
                           htmlFor="withdraw-events-modal"
@@ -80,13 +80,9 @@ const Members: NextPage = () => {
                         </label>
                       </div>
                       <div className="flex items-center gap-4">
-                        <progress
-                          className="progress rounded-none h-8 w-full progress-primary text-white"
-                          value={percentage}
-                          max="100"
-                        ></progress>
+                        <progress className="progress rounded-none h-8 w-full" value={percentage} max="100"></progress>
 
-                        <div className="relative right-4 text-color=[#fff]">{percentage}%</div>
+                        <div className="">{percentage}%</div>
                       </div>
                       <div>
                         Ξ {parseFloat(unlocked).toFixed(4)} / {cap}

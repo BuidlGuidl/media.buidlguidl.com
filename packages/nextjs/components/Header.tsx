@@ -26,7 +26,7 @@ export const Header = () => (
       <meta property="og:image" content="https://media.buidlguidl.com/thumbnail.png" />
       <meta property="twitter:image" content="https://media.buidlguidl.com/thumbnail.png" />
     </Head>
-    <div className="sticky lg:static top-0 navbar mb-6 bg-base-100 min-h-0 flex-shrink-0 justify-between z-20 p-4 items-start">
+    <div className="sticky lg:static top-0 navbar mb-6 bg-base-100 min-h-0 flex-shrink-0 justify-between z-20 p-4 items-start min-w-80">
       <div className="flex-col items-start">
         <div className="bgmedia-logo w-36">
           <Link href="/">

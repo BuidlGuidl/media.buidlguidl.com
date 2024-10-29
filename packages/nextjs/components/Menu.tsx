@@ -9,17 +9,15 @@ export const Menu = () => {
   const { asPath } = useRouter();
   return (
     <div>
-      <ul className="px-4 flex gap-4">
-        <li>
-          <Link href="/" className={`${asPath === "/" ? "" : "link"} link-primary underline-offset-2`}>
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link href="/members" className={`${asPath === "/members" ? "" : "link"} link-primary underline-offset-2`}>
-            Members
-          </Link>
-        </li>
+      <div role="tablist" className="tabs tabs-lifted tabs-xl">
+        <Link role="tab" href="/" className={`${asPath === "/" ? "" : "tab-active"} tab`}>
+          Home
+        </Link>
+
+        <Link role="tab" href="/members" className={`${asPath === "/members" ? "" : "tab-active"} tab`}>
+          Members
+        </Link>
+
         {/* <li>
           <Link
             href="/contributions"
@@ -33,7 +31,7 @@ export const Menu = () => {
             F.A.Q.
           </Link>
         </li> */}
-      </ul>
+      </div>
     </div>
   );
 };

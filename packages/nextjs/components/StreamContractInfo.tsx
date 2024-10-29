@@ -26,9 +26,9 @@ export const StreamContractInfo = () => {
 
   return (
     <>
-      <div className="mt-16 text-xs">
+      <div className="mt-16 text-sm">
         <div className="p-6 pb-12 bg-[#fff] text-[#000] rounded-tl-lg rounded-tr-lg">
-          <p className="">
+          <p className="mt-0 text-sm">
             Stream Contract
             <span
               className="tooltip text-white font-normal"
@@ -58,7 +58,7 @@ export const StreamContractInfo = () => {
           )}
         </div>
         <div className="bg-[#FFFFFFcc] text-[#000] text-xs p-6 mt-0 rounded-bl-lg rounded-br-lg">
-          <p className="">Owner</p>
+          <p className="mt-0 text-sm">Owner</p>
           <Address address={owner} />
         </div>
       </div>
