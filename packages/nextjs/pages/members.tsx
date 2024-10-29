@@ -47,9 +47,9 @@ const Members: NextPage = () => {
   return (
     <>
       <div className="max-w-3xl px-4 py-8">
-        <h1 className="text-4xl font-bold mb-8 text-primary-content bg-primary inline-block p-2">Members</h1>
+        <h1 className="text-3xl font-[900] mb-8">Members</h1>
         <div className="mb-16">
-          <p className="mt-0 mb-10">
+          <p className="mt-0 mb-10 text-xl font-[100]">
             These are the BG Media active builders and their streams. You can click on any builder to see their detailed
             contributions.
           </p>
@@ -59,34 +59,38 @@ const Members: NextPage = () => {
               <div className="text-lg loading-dots">Loading...</div>
             </div>
           ) : (
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-12">
               {allBuildersData?.map(builderData => {
                 if (builderData.cap.isZero()) return;
                 const cap = ethers.utils.formatEther(builderData.cap || 0);
                 const unlocked = ethers.utils.formatEther(builderData.unlockedAmount || 0);
                 const percentage = Math.floor((parseFloat(unlocked) / parseFloat(cap)) * 100);
                 return (
-                  <div className="flex flex-col md:flex-row gap-2 md:gap-6" key={builderData.builderAddress}>
-                    <div className="flex flex-col md:items-center">
+                  <div className="flex flex-col" key={builderData.builderAddress}>
+                    <div className="flex flex-col">
+                      <div className="md:w-1/2 flex">
+                        <label
+                          htmlFor="withdraw-events-modal"
+                          className="cursor-pointer"
+                          onClick={() => {
+                            setSelectedAddress(builderData.builderAddress);
+                          }}
+                        >
+                          <Address address={builderData.builderAddress} disableAddressLink={true} />
+                        </label>
+                      </div>
+                      <div className="flex items-center gap-4">
+                        <progress
+                          className="progress rounded-none h-8 w-full progress-primary text-white"
+                          value={percentage}
+                          max="100"
+                        ></progress>
+
+                        <div>{percentage}%</div>
+                      </div>
                       <div>
                         Ξ {parseFloat(unlocked).toFixed(4)} / {cap}
                       </div>
-                      <progress
-                        className="progress w-56 progress-primary bg-white"
-                        value={percentage}
-                        max="100"
-                      ></progress>
-                    </div>
-                    <div className="md:w-1/2 flex">
-                      <label
-                        htmlFor="withdraw-events-modal"
-                        className="cursor-pointer"
-                        onClick={() => {
-                          setSelectedAddress(builderData.builderAddress);
-                        }}
-                      >
-                        <Address address={builderData.builderAddress} disableAddressLink={true} />
-                      </label>
                     </div>
                   </div>
                 );
@@ -99,11 +103,14 @@ const Members: NextPage = () => {
 
       <input type="checkbox" id="withdraw-modal" className="modal-toggle" />
       <label htmlFor="withdraw-modal" className="modal cursor-pointer">
-        <label className="modal-box relative bg-primary shadow shadow-primary">
+        <label className="modal-box bg-[#FFF] relative">
           {/* dummy input to capture event onclick on modal box */}
           <input className="h-0 w-0 absolute top-0 left-0" />
-          <h3 className="text-xl font-bold mb-8">Withdraw from your stream</h3>
-          <label htmlFor="withdraw-modal" className="btn btn-ghost btn-sm btn-circle absolute right-3 top-3">
+          <h3 className="text-base font-bold mb-8">Withdraw from your stream</h3>
+          <label
+            htmlFor="withdraw-modal"
+            className="btn btn-ghost hover:border-base-100 hover:text-base-100 hover:bg-[#00000000] btn-sm btn-circle absolute right-3 top-3"
+          >
             ✕
           </label>
           <div className="space-y-3">
@@ -125,14 +132,17 @@ const Members: NextPage = () => {
       </label>
       <input type="checkbox" id="withdraw-events-modal" className="modal-toggle" />
       <label htmlFor="withdraw-events-modal" className="modal cursor-pointer">
-        <label className="modal-box relative max-w-4xl shadow shadow-primary">
+        <label className="modal-box bg-[#FFF] relative max-w-2xl">
           {/* dummy input to capture event onclick on modal box */}
           <input className="h-0 w-0 absolute top-0 left-0" />
-          <h3 className="text-xl font-bold mb-8">
-            <p className="mb-1">Contributions</p>
+          <h3 className="mb-8 text-3xl">
+            <p className="mb-8 font-bold text-base ">Contributions</p>
             <Address address={selectedAddress} />
           </h3>
-          <label htmlFor="withdraw-events-modal" className="btn btn-ghost btn-sm btn-circle absolute right-3 top-3">
+          <label
+            htmlFor="withdraw-events-modal"
+            className="btn btn-ghost hover:border-base-100 hover:text-base-100 hover:bg-[#00000000] btn-sm btn-circle absolute right-3 top-3"
+          >
             ✕
           </label>
           <div className="space-y-3">
@@ -143,7 +153,7 @@ const Members: NextPage = () => {
                   <div className="text-lg loading-dots">Loading...</div>
                 </div>
               ) : filteredEvents.length > 0 ? (
-                <div className="flex flex-col">
+                <div className="flex flex-col font-sans text-sm leading-loose">
                   {filteredEvents.map(event => (
                     <div key={event.id} className="flex flex-col">
                       <div>

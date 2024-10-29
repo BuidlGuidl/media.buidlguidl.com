@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
 import { Menu } from "~~/components/Menu";
 import { FaucetButton, RainbowKitCustomConnectButton } from "~~/components/scaffold-eth";
@@ -25,12 +26,13 @@ export const Header = () => (
       <meta property="og:image" content="https://media.buidlguidl.com/thumbnail.png" />
       <meta property="twitter:image" content="https://media.buidlguidl.com/thumbnail.png" />
     </Head>
-    <div className="sticky lg:static top-0 navbar bg-base-100 min-h-0 flex-shrink-0 justify-between z-20 p-4 items-start">
+    <div className="sticky lg:static top-0 navbar mb-6 bg-base-100 min-h-0 flex-shrink-0 justify-between z-20 p-4 items-start">
       <div className="flex-col items-start">
-        <p className="m-0 text-xl md:text-3xl font-bold text-secondary !leading-7">
-          <Link href="/">BG Media</Link>
-        </p>
-        <p className="m-0 text-secondary leading-5 opacity-75">BuidlGuidl Media</p>
+        <div className="bgmedia-logo w-36">
+          <Link href="/">
+            <Image alt="bg media logo" src="/images/logo_bgmedia.svg" width="120" height="120" />
+          </Link>
+        </div>
       </div>
       <div className="navbar-end flex-grow">
         <RainbowKitCustomConnectButton />

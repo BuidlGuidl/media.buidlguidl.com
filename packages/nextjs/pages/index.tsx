@@ -5,16 +5,16 @@ import { StreamContractInfo } from "~~/components/StreamContractInfo";
 const Home: NextPage = () => {
   return (
     <>
-      <div className="max-w-3xl px-4 py-8">
-        <h1 className="text-4xl font-bold mb-8 text-primary-content bg-primary inline-block p-2">Welcome</h1>
+      <div className="max-w-6xl space-y-12 px-4 py-12">
+        <h1 className="font-[900] text-xl">Welcome</h1>
         <div>
-          <p className="mt-0">
+          <p className="font-[100] mt-0 text-4xl md:text-5xl ">
             Funding high leverage BuidlGuidl members for their designs, social media contributions, and other media
             related work.
           </p>
-          <p>Made possible by the BuidlGuidl!</p>
+          <p className="text-xs">Made possible by the BuidlGuidl!</p>
         </div>
-        <div className="mb-10">
+        <div className="mb-10 max-w-xl">
           <StreamContractInfo />
         </div>
       </div>
