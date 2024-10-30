@@ -28,9 +28,9 @@ export const Header = () => (
     </Head>
     <div className="sticky lg:static top-0 navbar mb-6 bg-base-100 min-h-0 flex-shrink-0 justify-between z-20 p-4 items-start">
       <div className="flex-col items-start">
-        <div className="bgmedia-logo w-36">
+        <div className="bgmedia-logo">
           <Link href="/">
-            <Image alt="bg media logo" src="/images/logo_bgmedia.svg" width="120" height="120" />
+            <Image alt="bg media logo" src="/assets/bg-media-2.png" width="180" height="180" />
           </Link>
         </div>
       </div>

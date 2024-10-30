@@ -47,9 +47,9 @@ const Members: NextPage = () => {
   return (
     <>
       <div className="max-w-3xl px-4 py-8">
-        <h1 className="text-3xl font-[900] mb-8">Members</h1>
+        <h1 className="text-3xl font-[900] mb-6">Members</h1>
         <div className="mb-16">
-          <p className="mt-0 mb-10 text-xl font-[100]">
+          <p className="mt-0 mb-14 text-xl font-[100]">
             These are the BG Media active builders and their streams. You can click on any builder to see their detailed
             contributions.
           </p>
@@ -59,7 +59,7 @@ const Members: NextPage = () => {
               <div className="text-lg loading-dots">Loading...</div>
             </div>
           ) : (
-            <div className="flex flex-col gap-12">
+            <div className="flex flex-col gap-12 text-base">
               {allBuildersData?.map(builderData => {
                 if (builderData.cap.isZero()) return;
                 const cap = ethers.utils.formatEther(builderData.cap || 0);
@@ -67,7 +67,7 @@ const Members: NextPage = () => {
                 const percentage = Math.floor((parseFloat(unlocked) / parseFloat(cap)) * 100);
                 return (
                   <div className="flex flex-col" key={builderData.builderAddress}>
-                    <div className="flex flex-col">
+                    <div className="flex flex-col gap-2">
                       <div className="md:w-1/2 flex">
                         <label
                           htmlFor="withdraw-events-modal"
