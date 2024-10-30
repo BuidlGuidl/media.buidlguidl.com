@@ -26,8 +26,8 @@ export const StreamContractInfo = () => {
 
   return (
     <>
-      <div className="mt-16 text-xs">
-        <div className="p-6 pb-12 bg-[#fff] text-[#000] rounded-tl-lg rounded-tr-lg">
+      <div className="mt-16 text-base w-[500px]">
+        <div className="p-6 pb-10 bg-[#fff] text-[#000] rounded-tl-lg rounded-tr-lg flex flex-col items-center">
           <p className="">
             Stream Contract
             <span
@@ -40,8 +40,9 @@ export const StreamContractInfo = () => {
           <div className="flex gap-2 items-baseline">
             <div className="flex flex-col items-center">
               <Address address={streamContract?.address} />
-              <span className="text-xs text-[#323aa8]">Mainnet</span>
-            </div>{" "}
+              <span className="text-sm text-[#323aa8]">Mainnet</span>
+            </div>
+            {""}
             /
             <Balance address={streamContract?.address} className="text-3xl" />
           </div>
@@ -57,8 +58,8 @@ export const StreamContractInfo = () => {
             </div>
           )}
         </div>
-        <div className="bg-[#FFFFFFcc] text-[#000] text-xs p-6 mt-0 rounded-bl-lg rounded-br-lg">
-          <p className="">Owner</p>
+        <div className="bg-[#FFFFFFcc] text-[#000] p-6 pb-12 rounded-bl-lg rounded-br-lg flex flex-col items-center">
+          <p className="mb-3">Owner</p>
           <Address address={owner} />
         </div>
       </div>
