@@ -1,7 +1,7 @@
 import React from "react";
 import { BigNumber } from "ethers";
 import { useAccount } from "wagmi";
-import { BanknotesIcon, QuestionMarkCircleIcon } from "@heroicons/react/24/outline";
+import { BanknotesIcon } from "@heroicons/react/24/outline";
 import { Address, Balance } from "~~/components/scaffold-eth";
 import { useDeployedContractInfo, useScaffoldContractRead } from "~~/hooks/scaffold-eth";
 
@@ -26,23 +26,16 @@ export const StreamContractInfo = () => {
 
   return (
     <>
-      <div className="mt-16 text-xs">
-        <div className="p-6 pb-12 bg-[#fff] text-[#000] rounded-tl-lg rounded-tr-lg">
-          <p className="">
-            Stream Contract
-            <span
-              className="tooltip text-white font-normal"
-              data-tip="All streams and contributions are handled by a contract on Mainnet"
-            >
-              <QuestionMarkCircleIcon className="h-5 w-5 inline-block ml-2" />
-            </span>
-          </p>
-          <div className="flex gap-2 items-baseline">
+      <div className="mt-16 text-base">
+        <div className="p-6 pb-10 bg-[#fff] text-[#000] rounded-tl-lg rounded-tr-lg flex flex-col items-center">
+          <p>Stream Contract</p>
+          <div className="flex flex-col sm:flex-row gap-2 items-center sm:items-baseline">
             <div className="flex flex-col items-center">
               <Address address={streamContract?.address} />
-              <span className="text-xs text-[#323aa8]">Mainnet</span>
-            </div>{" "}
-            /
+              <span className="text-sm text-[#323aa8]">Mainnet</span>
+            </div>
+            {""}
+            <span className="hidden sm:block">/</span>
             <Balance address={streamContract?.address} className="text-3xl" />
           </div>
           {address && amIAStreamdBuilder && (
@@ -57,8 +50,8 @@ export const StreamContractInfo = () => {
             </div>
           )}
         </div>
-        <div className="bg-[#FFFFFFcc] text-[#000] text-xs p-6 mt-0 rounded-bl-lg rounded-br-lg">
-          <p className="">Owner</p>
+        <div className="bg-[#FFFFFFcc] text-[#000] p-6 pb-12 rounded-bl-lg rounded-br-lg flex flex-col items-center">
+          <p className="mb-3">Owner</p>
           <Address address={owner} />
         </div>
       </div>
