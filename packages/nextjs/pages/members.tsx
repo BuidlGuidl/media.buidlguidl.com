@@ -40,10 +40,14 @@ const Members: NextPage = () => {
 
   useEffect(() => {
     if (selectedAddress) {
-      setFilteredEvents(allWithdrawEvents?.filter((event: any) => event.builder === selectedAddress) || []);
+      setFilteredEvents(
+        allWithdrawEvents?.filter((event: any) => {
+          return event.builder.toLowerCase() === selectedAddress.toLowerCase();
+        }) || [],
+      );
     }
-  }, [selectedAddress, allWithdrawEvents]);
-
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedAddress]);
   return (
     <>
       <div className="max-w-3xl px-4 py-8">
