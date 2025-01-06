@@ -4,11 +4,13 @@ import contracts from "~~/generated/hardhat_contracts";
 const WithdrawalsQuery = gql`
   query Withdrawls($cohortAddress: String!) {
     cohortWithdrawals(where: { cohortContractAddress: $cohortAddress }, orderBy: "timestamp", orderDirection: "desc") {
-      reason
-      builder
-      amount
-      timestamp
-      id
+      items {
+        reason
+        builder
+        amount
+        timestamp
+        id
+      }
     }
   }
 `;
@@ -21,7 +23,7 @@ export const useCohortWithdrawEvents = () => {
     },
   });
 
-  const newContractWithdrawEvents = newWithdrawEventsData?.cohortWithdrawals || [];
+  const newContractWithdrawEvents = newWithdrawEventsData?.cohortWithdrawals.items || [];
 
   const data = [...newContractWithdrawEvents];
 
